@@ -1,0 +1,250 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ashot Arushanyan — DevOps / SRE Engineer</title>
+<meta name="description" content="DevOps / SRE engineer — AWS, Cloudflare, Kubernetes, Terraform. I build and run production infrastructure. Open to remote roles.">
+<meta property="og:title" content="Ashot Arushanyan — DevOps / SRE Engineer">
+<meta property="og:description" content="I build and run production infrastructure — AWS, Cloudflare, Kubernetes, Terraform. Open to remote roles.">
+<meta property="og:type" content="website">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#FCFCFC">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#0E0E0E">
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20100%20100'%3E%3Crect%20width='100'%20height='100'%20fill='%230E0E0E'/%3E%3Ctext%20x='50'%20y='74'%20font-family='monospace'%20font-size='58'%20font-weight='bold'%20fill='%233FB950'%20text-anchor='middle'%3E%26gt;_%3C/text%3E%3C/svg%3E">
+<style>
+/* ---------- paper terminal: character grid, one accent, no decoration ---------- */
+:root {
+  color-scheme: light dark;
+  --bg:     #FCFCFC;
+  --fg:     #141414;
+  --muted:  #6B6B6B;
+  --accent: #0A7D33;
+  --rule:   #D9D9D4;
+  --lh:     1.5rem;              /* baseline unit — all vertical rhythm derives from it */
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg:     #0E0E0E;
+    --fg:     #E8E8E8;
+    --muted:  #9A9A9A;
+    --accent: #3FB950;
+    --rule:   #2A2A2A;
+  }
+}
+
+* { box-sizing: border-box; margin: 0; }
+
+html { background: var(--bg); }
+
+body {
+  font-family: ui-monospace, "SF Mono", SFMono-Regular, Menlo, Consolas,
+               "Cascadia Mono", "Roboto Mono", "Liberation Mono", monospace;
+  font-size: 1rem;
+  line-height: var(--lh);
+  font-variant-numeric: tabular-nums lining-nums;
+  color: var(--fg);
+  background: var(--bg);
+  max-width: 76ch;                                        /* fallback */
+  max-width: calc(min(76ch, round(down, 100%, 1ch)));     /* snap to whole columns */
+  margin: 0 auto;
+  padding: calc(2 * var(--lh)) 2ch calc(3 * var(--lh));
+}
+
+::selection { background: var(--accent); color: var(--bg); }
+
+a {
+  color: var(--accent);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+}
+a:hover { background: var(--accent); color: var(--bg); text-decoration: none; }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+/* ---------- header ---------- */
+.path { color: var(--muted); margin-bottom: var(--lh); }
+
+h1 {
+  font-size: clamp(1.5rem, 6vw, 2.5rem);
+  line-height: 1.15;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+}
+
+.role { margin-bottom: var(--lh); }
+
+.caret {
+  display: inline-block;
+  width: 0.6ch;
+  height: 1.05em;
+  margin-left: 0.4ch;
+  background: var(--accent);
+  vertical-align: text-bottom;
+  animation: blink 1.1s steps(2, start) infinite;
+}
+@keyframes blink { to { visibility: hidden; } }
+@media (prefers-reduced-motion: reduce) { .caret { animation: none; } }
+
+.tagline { max-width: 60ch; margin-bottom: var(--lh); }
+
+.cta-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: calc(var(--lh) / 2) 2ch;
+  margin-bottom: calc(2 * var(--lh));
+}
+.btn {
+  display: inline-block;
+  border: 2px solid var(--fg);
+  color: var(--fg);
+  padding: 0 2ch;
+  text-decoration: none;
+}
+.btn:hover { background: var(--fg); color: var(--bg); }
+.btn-primary { border-color: var(--accent); color: var(--accent); }
+.btn-primary:hover { background: var(--accent); color: var(--bg); }
+
+/* ---------- metadata block ---------- */
+.meta {
+  display: grid;
+  grid-template-columns: 12ch 1fr;
+  border-top: 1px solid var(--rule);
+  border-bottom: 1px solid var(--rule);
+  padding: calc(var(--lh) / 2) 0;
+  margin-bottom: calc(2 * var(--lh));
+}
+.meta dt { color: var(--muted); }
+.meta dd { margin: 0; }
+
+.ok { color: var(--accent); }
+
+/* ---------- sections ---------- */
+section { margin-bottom: calc(2 * var(--lh)); }
+
+h2 {
+  display: flex;
+  align-items: center;
+  gap: 1ch;
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--muted);
+  margin-bottom: var(--lh);
+}
+h2 .idx { color: var(--accent); }
+h2::after { content: ""; flex: 1; border-top: 1px solid var(--rule); }
+
+section p { max-width: 64ch; }
+section p + p { margin-top: var(--lh); }
+
+/* ---------- project card ---------- */
+.card {
+  position: relative;
+  border: 2px solid var(--fg);
+  padding: var(--lh) 2ch calc(var(--lh) / 1.5);
+  margin-top: calc(var(--lh) / 2);
+}
+.card h3 {
+  position: absolute;
+  top: -0.75em;
+  left: 2ch;
+  background: var(--bg);
+  padding: 0 1ch;
+  font-size: 1rem;
+  font-weight: 700;
+}
+.card-meta { color: var(--muted); margin-bottom: calc(var(--lh) / 2); }
+
+/* ---------- contact ---------- */
+.contact {
+  display: grid;
+  grid-template-columns: 12ch 1fr;
+  row-gap: 0;
+}
+.contact dt { color: var(--muted); }
+.contact dd { margin: 0; overflow-wrap: anywhere; }
+
+/* ---------- footer ---------- */
+footer {
+  border-top: 1px solid var(--rule);
+  padding-top: calc(var(--lh) / 2);
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+</style>
+</head>
+<body>
+
+<header>
+  <p class="path" aria-hidden="true">~/ashot-arushanyan $</p>
+  <h1>Ashot Arushanyan</h1>
+  <p class="role">DevOps / SRE Engineer<span class="caret" aria-hidden="true"></span></p>
+  <p class="tagline">
+    I build and run production infrastructure — and the pipelines,
+    guardrails, and observability around it.
+  </p>
+  <p class="cta-row">
+    <a class="btn btn-primary" href="mailto:arushanyanash@gmail.com">get in touch</a>
+    <a class="btn" href="https://github.com/fock1e">github</a>
+    <a class="btn" href="https://www.linkedin.com/in/ashotarushanyan/">linkedin</a>
+  </p>
+</header>
+
+<main>
+  <dl class="meta">
+    <dt>role</dt>       <dd>DevOps / SRE engineer</dd>
+    <dt>location</dt>   <dd>remote · Yerevan, Armenia (UTC+4)</dd>
+    <dt>stack</dt>      <dd>AWS · Cloudflare · Kubernetes · Terraform</dd>
+    <dt>status</dt>     <dd><span class="ok" aria-hidden="true">●</span> open to remote roles</dd>
+    <dt>javascript</dt> <dd>0 bytes — this page is one HTML file</dd>
+  </dl>
+
+  <section aria-labelledby="s-now">
+    <h2 id="s-now"><span class="idx">01</span> · now</h2>
+    <p>
+      I run production infrastructure for high-traffic iGaming platforms:
+      multi-region AWS, Cloudflare at the edge, Kubernetes underneath —
+      all of it managed as Terraform.
+    </p>
+    <p>
+      I care about boring deploys, alerts that mean something, and
+      guardrails that make the safe path the easy path.
+    </p>
+  </section>
+
+  <section aria-labelledby="s-shipped">
+    <h2 id="s-shipped"><span class="idx">02</span> · shipped</h2>
+    <article class="card">
+      <h3>scenar.io</h3>
+      <p class="card-meta">
+        <span class="ok" aria-hidden="true">●</span> live —
+        <a href="https://scenar.site">scenar.site</a>
+      </p>
+      <p>
+        Hands-on DevOps interview practice in the browser — realistic
+        scenarios instead of flashcards. Designed, built, and operated solo.
+      </p>
+    </article>
+    <!-- future cards, same .card markup:
+         shelf-radar — once launched
+         spend-bot   — once done -->
+  </section>
+
+  <section aria-labelledby="s-contact">
+    <h2 id="s-contact"><span class="idx">03</span> · contact</h2>
+    <dl class="contact">
+      <dt>email</dt>    <dd><a href="mailto:arushanyanash@gmail.com">arushanyanash@gmail.com</a></dd>
+      <dt>github</dt>   <dd><a href="https://github.com/fock1e">github.com/fock1e</a></dd>
+      <dt>linkedin</dt> <dd><a href="https://www.linkedin.com/in/ashotarushanyan/">linkedin.com/in/ashotarushanyan</a></dd>
+    </dl>
+  </section>
+</main>
+
+<footer>
+  <p>© 2026 Ashot Arushanyan · one HTML file · system fonts · zero JavaScript · no tracking</p>
+</footer>
+
+</body>
+</html>
