@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>CV — Ashot Arushanyan, Senior DevOps Engineer</title>
-<meta name="description" content="CV of Ashot Arushanyan — Senior DevOps engineer. AWS, GCP, Cloudflare, Kubernetes, Terraform. 5 years, $165K+/yr saved, 99.9% uptime.">
+<title>Track record — Ashot Arushanyan, Senior SRE/DevOps Engineer</title>
+<meta name="description" content="Career at a glance — Ashot Arushanyan, Senior SRE/DevOps engineer. AWS, GCP, Cloudflare, Kubernetes, Terraform.">
 <link rel="canonical" href="https://ashot.scenar.site/cv/">
-<meta property="og:title" content="CV — Ashot Arushanyan, Senior DevOps Engineer">
-<meta property="og:description" content="Senior DevOps engineer — AWS, GCP, Cloudflare, Kubernetes, Terraform. Print this page for the PDF.">
+<meta property="og:title" content="Track record — Ashot Arushanyan, Senior SRE/DevOps Engineer">
+<meta property="og:description" content="Career at a glance — roles, stack, certifications. Email for the full CV.">
 <meta property="og:type" content="profile">
 <meta property="og:url" content="https://ashot.scenar.site/cv/">
 <meta property="og:image" content="https://ashot.scenar.site/og.png">
@@ -81,11 +81,11 @@ h1 {
   overflow-wrap: anywhere;
 }
 
-.print-hint {
+.cv-note {
   border: 1px solid var(--rule);
   color: var(--muted);
   padding: calc(var(--lh) / 4) 1ch;
-  margin-bottom: calc(2 * var(--lh));
+  margin-bottom: var(--lh);
   font-size: 0.85rem;
 }
 
@@ -102,6 +102,11 @@ h2 {
 }
 h2::after { content: ""; flex: 1; border-top: 1px solid var(--rule); }
 
+.job { margin-bottom: var(--lh); }
+.job h3 { font-size: 1rem; font-weight: 700; }
+.job .jobmeta { color: var(--muted); }
+.job p { max-width: 70ch; }
+
 .skills { display: grid; grid-template-columns: 16ch 1fr; row-gap: calc(var(--lh) / 4); }
 .skills dt { color: var(--muted); }
 .skills dd { margin: 0; }
@@ -109,10 +114,6 @@ h2::after { content: ""; flex: 1; border-top: 1px solid var(--rule); }
   .skills { grid-template-columns: 1fr; }
   .skills dd { margin-bottom: calc(var(--lh) / 2); }
 }
-
-.job { margin-bottom: calc(1.5 * var(--lh)); }
-.job h3 { font-size: 1rem; font-weight: 700; }
-.job .jobmeta { color: var(--muted); margin-bottom: calc(var(--lh) / 2); }
 
 ul { list-style: none; padding: 0; }
 li { position: relative; padding-left: 2ch; }
@@ -127,16 +128,14 @@ footer {
   font-size: 0.85rem;
 }
 
-/* ---------- print: this page IS the PDF ---------- */
 @media print {
   :root {
     --bg: #ffffff; --fg: #000000; --muted: #444444;
     --accent: #0A5C28; --rule: #bbbbbb;
   }
   body { font-size: 10.5pt; line-height: 1.35; padding: 0; max-width: none; }
-  .path, .print-hint, footer { display: none; }
+  .path, footer { display: none; }
   a { color: var(--fg); text-decoration: none; }
-  .contact-line a { color: var(--fg); }
   .job { break-inside: avoid; }
   h2 { margin-top: 1.2em; }
 }
@@ -147,7 +146,7 @@ footer {
 <header>
   <p class="path"><span aria-hidden="true">~/ashot-arushanyan/cv $ </span><a href="/" aria-label="back to home">cd ~</a></p>
   <h1>Ashot Arushanyan</h1>
-  <p class="role">Senior DevOps Engineer</p>
+  <p class="role">Senior SRE/DevOps Engineer</p>
   <p class="contact-line">
     <a href="mailto:arushanyanash@gmail.com">arushanyanash@gmail.com</a> ·
     <a href="https://ashot.scenar.site">ashot.scenar.site</a> ·
@@ -155,25 +154,72 @@ footer {
     <a href="https://www.linkedin.com/in/ashotarushanyan/">linkedin</a> ·
     Yerevan, Armenia · open to remote
   </p>
-  <p class="print-hint">tip: print this page (⌘P / Ctrl+P) to get the PDF version</p>
+  <p class="cv-note">
+    this is the at-a-glance version — for a full CV tailored to your role,
+    <a href="mailto:arushanyanash@gmail.com">email me</a>
+  </p>
 </header>
 
 <main>
-  <section aria-label="Summary">
-    <h2>summary</h2>
-    <p>
-      Senior DevOps engineer with 5 years on AWS and GCP. GCP Professional and
-      HashiCorp certified, plus Claude Certified Architect from the first cohort.
-      Cost optimization is where I've shipped the most measurable wins: Karpenter
-      and FinOps work cut $120K+ off annual cloud spend at Metric Gaming, with
-      similar savings at MaxDuel. Day-to-day I run Kubernetes platforms across
-      18 clusters and 130 microservices at 99.9% uptime. Side work skews toward
-      AI-augmented DevOps tooling.
-    </p>
+  <section aria-label="Timeline">
+    <h2>timeline</h2>
+
+    <article class="job">
+      <h3>Independent DevOps Engineer <span class="jobmeta">· contract</span></h3>
+      <p class="jobmeta">Nov 2025 – present · remote</p>
+      <p>
+        Zero-downtime credential rotation (Vault, Gardener-managed Kubernetes)
+        for a FIPS 140-3 GovCloud platform; autoscaling GitHub Actions runner
+        fleets on EC2 spot; a 20+ domain Cloudflare migration with zero-downtime
+        cutovers — all Terraform-managed.
+      </p>
+    </article>
+
+    <article class="job">
+      <h3>Senior DevOps Engineer <span class="jobmeta">· MaxDuel</span></h3>
+      <p class="jobmeta">Jan 2025 – present · remote</p>
+      <p>
+        Built the GCP footprint from scratch in Terraform — 10+ environments,
+        new-environment provisioning under 15 minutes; GKE behind 200+
+        microservices with ArgoCD GitOps; observability stack that cut MTTD
+        from 25 minutes to under 3.
+      </p>
+    </article>
+
+    <article class="job">
+      <h3>Senior Site Reliability Engineer <span class="jobmeta">· Metric Gaming</span></h3>
+      <p class="jobmeta">Sep 2023 – Jan 2025 · remote</p>
+      <p>
+        Ran 50+ microservices across 8 EKS clusters at 99.9% uptime (99.95% on
+        payments); Karpenter rollout cut infrastructure cost 40–60% (~$120K/yr);
+        SOC 2 / PCI-DSS audit prep down from two weeks to two days.
+      </p>
+    </article>
+
+    <article class="job">
+      <h3>Infrastructure Engineer <span class="jobmeta">· SADA, An Insight Company</span></h3>
+      <p class="jobmeta">May 2021 – Aug 2023 · Yerevan, Armenia</p>
+      <p>
+        Built 5+ GCP landing zones from scratch (org hierarchy, VPC, IAM,
+        guardrails) and migrated 400+ VMs from on-prem into Terraform-managed
+        GCP, cutting operational overhead ~70%.
+      </p>
+    </article>
   </section>
 
-  <section aria-label="Technical skills">
-    <h2>technical skills</h2>
+  <section aria-label="Projects">
+    <h2>projects</h2>
+    <article class="job">
+      <h3>scenar.io <span class="jobmeta">· creator (<a href="https://scenar.site">scenar.site</a>)</span></h3>
+      <p>
+        AI-powered SRE/DevOps interview practice — designed, built, and
+        operated solo: TypeScript, Svelte 5, Claude API, Fly.io, 240+ tests.
+      </p>
+    </article>
+  </section>
+
+  <section aria-label="Skills">
+    <h2>stack</h2>
     <dl class="skills">
       <dt>cloud</dt>          <dd>AWS (EKS, RDS, MSK, IAM) · GCP (GKE, Cloud SQL, BigQuery, Cloud Run)</dd>
       <dt>containers</dt>     <dd>Kubernetes · Docker · Helm · Karpenter · Istio</dd>
@@ -181,70 +227,17 @@ footer {
       <dt>ci/cd</dt>          <dd>GitHub Actions · ArgoCD · Jenkins · GitLab CI · Flux</dd>
       <dt>observability</dt>  <dd>Grafana · Prometheus · Loki · Tempo · DataDog · OpenTelemetry</dd>
       <dt>languages</dt>      <dd>Python · Go · TypeScript · Bash</dd>
-      <dt>ai</dt>             <dd>Claude API · OpenRouter · LLM pipelines · structured output</dd>
-      <dt>security/net</dt>   <dd>DevSecOps · OPA/Gatekeeper · Trivy · Vault · Secrets Manager · Cloudflare (WAF, LB, Zero Trust) · VPC · DNS · mTLS</dd>
-      <dt>practices</dt>      <dd>SRE · FinOps · incident management · RFC-driven architecture · toil reduction</dd>
+      <dt>security/net</dt>   <dd>Vault · OPA/Gatekeeper · Trivy · Cloudflare (WAF, LB, Zero Trust) · VPC · DNS · mTLS</dd>
+      <dt>practices</dt>      <dd>SRE · FinOps · incident management · RFC-driven architecture</dd>
     </dl>
-  </section>
-
-  <section aria-label="Work experience">
-    <h2>experience</h2>
-
-    <article class="job">
-      <h3>MaxDuel — Senior DevOps Engineer</h3>
-      <p class="jobmeta">Jan 2025 – present · remote</p>
-      <ul>
-        <li>Cut GKE costs 40–45% ($85K/year) by migrating clusters to spot instances; tuned PDBs and HPA policies to keep evictions zero-downtime.</li>
-        <li>Built the Terraform IaC platform from scratch, workspace-based with shared modules — provisions 10 environments in under 15 minutes, no copy-paste.</li>
-        <li>Scaled the GitHub Actions + ArgoCD pipeline to 80 microservices on GKE: 50+ deploys per day, canary rollbacks complete in under 5 minutes.</li>
-        <li>Set up the observability stack on Grafana, Prometheus, Loki, and Tempo with custom SLO dashboards — MTTD dropped from 25 minutes to under 3.</li>
-        <li>Multi-region Cloudflare geo-steering across Zurich and Hong Kong deployments; P95 latency under 100ms globally.</li>
-        <li>Wrote Python automation for on-call routing, IAM audits, and cross-environment SQL execution — eliminated 15 hours/week of manual SRE work.</li>
-      </ul>
-    </article>
-
-    <article class="job">
-      <h3>Metric Gaming — Senior Site Reliability Engineer</h3>
-      <p class="jobmeta">Sep 2023 – Jan 2025 · remote</p>
-      <ul>
-        <li>Saved $120K+ annually (40–60% drop in compute spend) by rolling out Karpenter on EKS and moving workloads to spot.</li>
-        <li>Led the FinOps program: rightsizing, reserved instances, and idle-resource cleanup pulled another 28% off AWS spend, worth $45K/year.</li>
-        <li>Wrote reusable Terraform modules for EKS, RDS, and MSK with security defaults baked in — new infra provisioning dropped from 2 days to 4 hours.</li>
-        <li>Set up the company's first incident management framework and RFC process; authored 40+ proposals aligning architecture across 6 engineering teams.</li>
-        <li>Mentored 3 junior engineers (Kubernetes, Terraform, SRE basics) — all three promoted within 12 months.</li>
-        <li>Automated SOC 2 and PCI-DSS compliance reporting, cutting audit prep from 2 weeks to 2 days.</li>
-      </ul>
-    </article>
-
-    <article class="job">
-      <h3>SADA, An Insight Company — Infrastructure Engineer</h3>
-      <p class="jobmeta">May 2021 – Aug 2023 · Yerevan, Armenia</p>
-      <ul>
-        <li>Owned 10 enterprise infrastructure projects across retail, fintech, and healthcare; clients ranged $5M to $50M in cloud spend — pre-sales, architecture, and delivery.</li>
-        <li>Built 5 GCP landing zones from scratch: org hierarchy, VPC, IAM, and security guardrails for enterprise governance.</li>
-        <li>Migrated 400+ VMs from legacy on-prem to Terraform-managed GCP — operational overhead down 70%, deploy velocity up 4×.</li>
-        <li>Wrote 15 articles and runbooks for the internal knowledge base; new-engineer onboarding dropped from 6 weeks to 3.</li>
-      </ul>
-    </article>
-  </section>
-
-  <section aria-label="Projects">
-    <h2>projects</h2>
-    <article class="job">
-      <h3>scenar.io — creator &amp; developer (<a href="https://scenar.site">scenar.site</a>)</h3>
-      <ul>
-        <li>AI-powered SRE/DevOps interview prep platform: TypeScript, Svelte 5, and Claude AI.</li>
-        <li>Full production stack — Hono backend, Turso DB, Fly.io deployment, 240+ tests, Prometheus monitoring, billing integration, LLM cost optimization via model routing (38% savings).</li>
-      </ul>
-    </article>
   </section>
 
   <section aria-label="Certifications and education">
     <h2>certifications &amp; education</h2>
     <ul>
-      <li><strong>Claude Certified Architect</strong> (Anthropic 2026, first cohort)</li>
       <li><strong>GCP Professional</strong> — Cloud Architect · Cloud DevOps Engineer · Cloud Security Engineer</li>
-      <li><strong>HashiCorp Terraform Associate</strong> (002)</li>
+      <li><strong>HashiCorp Terraform Associate</strong></li>
+      <li><strong>Claude Certified Architect</strong> (Anthropic 2026, first cohort)</li>
       <li><strong>American University of Armenia</strong> — BSc, Engineering</li>
     </ul>
   </section>
