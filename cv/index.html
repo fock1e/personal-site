@@ -77,9 +77,11 @@ h1 {
 
 .contact-line {
   color: var(--muted);
-  margin: calc(var(--lh) / 2) 0 var(--lh);
-  overflow-wrap: anywhere;
+  margin: calc(var(--lh) / 2) 0 0;
 }
+.contact-line + .contact-line { margin: 0 0 var(--lh); }
+.ci { white-space: nowrap; }
+.ci:not(:last-child)::after { content: " ·"; color: var(--muted); }
 
 h2 {
   display: flex;
@@ -140,11 +142,14 @@ footer {
   <h1>Ashot Arushanyan</h1>
   <p class="role">Senior SRE/DevOps Engineer</p>
   <p class="contact-line">
-    <a href="mailto:arushanyanash@gmail.com">arushanyanash@gmail.com</a> ·
-    <a href="https://ashot.scenar.site">ashot.scenar.site</a> ·
-    <a href="https://github.com/fock1e">github.com/fock1e</a> ·
-    <a href="https://www.linkedin.com/in/ashotarushanyan/">linkedin</a> ·
-    Yerevan, Armenia · open to remote
+    <span class="ci"><a href="mailto:arushanyanash@gmail.com">arushanyanash@gmail.com</a></span>
+    <span class="ci"><a href="https://ashot.scenar.site">ashot.scenar.site</a></span>
+    <span class="ci"><a href="https://github.com/fock1e">github.com/fock1e</a></span>
+    <span class="ci"><a href="https://www.linkedin.com/in/ashotarushanyan/">linkedin</a></span>
+  </p>
+  <p class="contact-line">
+    <span class="ci">Yerevan, Armenia</span>
+    <span class="ci">open to remote</span>
   </p>
 </header>
 
@@ -232,7 +237,14 @@ footer {
 </main>
 
 <footer>
-  <p>© 2026 Ashot Arushanyan · <a href="/">ashot.scenar.site</a> · one HTML file · system fonts · zero JavaScript · no tracking</p>
+  <p>
+    <span class="ci">© 2026 Ashot Arushanyan</span>
+    <span class="ci"><a href="/">ashot.scenar.site</a></span>
+    <span class="ci">one HTML file</span>
+    <span class="ci">system fonts</span>
+    <span class="ci">zero JavaScript</span>
+    <span class="ci">no tracking</span>
+  </p>
 </footer>
 
 </body>

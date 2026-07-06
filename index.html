@@ -203,6 +203,8 @@ footer {
   color: var(--muted);
   font-size: 0.85rem;
 }
+.ci { white-space: nowrap; }
+.ci:not(:last-child)::after { content: " ·"; }
 </style>
 </head>
 <body>
@@ -291,7 +293,13 @@ footer {
 </main>
 
 <footer>
-  <p>© 2026 Ashot Arushanyan · one HTML file · system fonts · zero JavaScript · no tracking</p>
+  <p>
+    <span class="ci">© 2026 Ashot Arushanyan</span>
+    <span class="ci">one HTML file</span>
+    <span class="ci">system fonts</span>
+    <span class="ci">zero JavaScript</span>
+    <span class="ci">no tracking</span>
+  </p>
 </footer>
 
 </body>
