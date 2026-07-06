@@ -1,3 +1,5 @@
 # local verification artifacts
 *.png
+!og.png
 .playwright-mcp/
+

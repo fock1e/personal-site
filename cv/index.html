@@ -1,0 +1,251 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Track record — Ashot Arushanyan, Senior SRE/DevOps Engineer</title>
+<meta name="description" content="Career at a glance — Ashot Arushanyan, Senior SRE/DevOps engineer. AWS, GCP, Cloudflare, Kubernetes, Terraform.">
+<link rel="canonical" href="https://ashot.scenar.site/cv/">
+<meta property="og:title" content="Track record — Ashot Arushanyan, Senior SRE/DevOps Engineer">
+<meta property="og:description" content="Career at a glance — roles, stack, certifications. Email for the full CV.">
+<meta property="og:type" content="profile">
+<meta property="og:url" content="https://ashot.scenar.site/cv/">
+<meta property="og:image" content="https://ashot.scenar.site/og.png">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#FCFCFC">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#0E0E0E">
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20100%20100'%3E%3Crect%20width='100'%20height='100'%20fill='%230E0E0E'/%3E%3Ctext%20x='50'%20y='74'%20font-family='monospace'%20font-size='58'%20font-weight='bold'%20fill='%233FB950'%20text-anchor='middle'%3E%26gt;_%3C/text%3E%3C/svg%3E">
+<style>
+:root {
+  color-scheme: light dark;
+  --bg:     #FCFCFC;
+  --fg:     #141414;
+  --muted:  #6B6B6B;
+  --accent: #0A7D33;
+  --rule:   #D9D9D4;
+  --lh:     1.5rem;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg:     #0E0E0E;
+    --fg:     #E8E8E8;
+    --muted:  #9A9A9A;
+    --accent: #3FB950;
+    --rule:   #2A2A2A;
+  }
+}
+
+* { box-sizing: border-box; margin: 0; }
+
+html { background: var(--bg); }
+
+body {
+  font-family: ui-monospace, "SF Mono", SFMono-Regular, Menlo, Consolas,
+               "Cascadia Mono", "Roboto Mono", "Liberation Mono", monospace;
+  font-size: 0.95rem;
+  line-height: var(--lh);
+  font-variant-numeric: tabular-nums lining-nums;
+  color: var(--fg);
+  background: var(--bg);
+  max-width: 80ch;
+  max-width: calc(min(80ch, round(down, 100%, 1ch)));
+  margin: 0 auto;
+  padding: calc(2 * var(--lh)) 2ch calc(3 * var(--lh));
+}
+
+::selection { background: var(--accent); color: var(--bg); }
+
+a {
+  color: var(--accent);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+}
+a:hover { background: var(--accent); color: var(--bg); text-decoration: none; }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+.path { color: var(--muted); margin-bottom: var(--lh); }
+
+h1 {
+  font-size: clamp(1.4rem, 5vw, 2rem);
+  line-height: 1.15;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+}
+
+.role { color: var(--accent); font-weight: 700; }
+
+.contact-line {
+  color: var(--muted);
+  margin: calc(var(--lh) / 2) 0 var(--lh);
+  overflow-wrap: anywhere;
+}
+
+.cv-note {
+  border: 1px solid var(--rule);
+  color: var(--muted);
+  padding: calc(var(--lh) / 4) 1ch;
+  margin-bottom: var(--lh);
+  font-size: 0.85rem;
+}
+
+h2 {
+  display: flex;
+  align-items: center;
+  gap: 1ch;
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--muted);
+  margin: calc(2 * var(--lh)) 0 var(--lh);
+}
+h2::after { content: ""; flex: 1; border-top: 1px solid var(--rule); }
+
+.job { margin-bottom: var(--lh); }
+.job h3 { font-size: 1rem; font-weight: 700; }
+.job .jobmeta { color: var(--muted); }
+.job p { max-width: 70ch; }
+
+.skills { display: grid; grid-template-columns: 16ch 1fr; row-gap: calc(var(--lh) / 4); }
+.skills dt { color: var(--muted); }
+.skills dd { margin: 0; }
+@media (max-width: 45ch) {
+  .skills { grid-template-columns: 1fr; }
+  .skills dd { margin-bottom: calc(var(--lh) / 2); }
+}
+
+ul { list-style: none; padding: 0; }
+li { position: relative; padding-left: 2ch; }
+li + li { margin-top: calc(var(--lh) / 4); }
+li::before { content: "▸"; position: absolute; left: 0; color: var(--accent); }
+
+footer {
+  border-top: 1px solid var(--rule);
+  padding-top: calc(var(--lh) / 2);
+  margin-top: calc(2 * var(--lh));
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+
+@media print {
+  :root {
+    --bg: #ffffff; --fg: #000000; --muted: #444444;
+    --accent: #0A5C28; --rule: #bbbbbb;
+  }
+  body { font-size: 10.5pt; line-height: 1.35; padding: 0; max-width: none; }
+  .path, footer { display: none; }
+  a { color: var(--fg); text-decoration: none; }
+  .job { break-inside: avoid; }
+  h2 { margin-top: 1.2em; }
+}
+</style>
+</head>
+<body>
+
+<header>
+  <p class="path"><span aria-hidden="true">~/ashot-arushanyan/cv $ </span><a href="/" aria-label="back to home">cd ~</a></p>
+  <h1>Ashot Arushanyan</h1>
+  <p class="role">Senior SRE/DevOps Engineer</p>
+  <p class="contact-line">
+    <a href="mailto:arushanyanash@gmail.com">arushanyanash@gmail.com</a> ·
+    <a href="https://ashot.scenar.site">ashot.scenar.site</a> ·
+    <a href="https://github.com/fock1e">github.com/fock1e</a> ·
+    <a href="https://www.linkedin.com/in/ashotarushanyan/">linkedin</a> ·
+    Yerevan, Armenia · open to remote
+  </p>
+  <p class="cv-note">
+    this is the at-a-glance version — for a full CV tailored to your role,
+    <a href="mailto:arushanyanash@gmail.com">email me</a>
+  </p>
+</header>
+
+<main>
+  <section aria-label="Timeline">
+    <h2>timeline</h2>
+
+    <article class="job">
+      <h3>Independent DevOps Engineer <span class="jobmeta">· contract</span></h3>
+      <p class="jobmeta">Nov 2025 – present · remote</p>
+      <p>
+        Zero-downtime credential rotation (Vault, Gardener-managed Kubernetes)
+        for a FIPS 140-3 GovCloud platform; autoscaling GitHub Actions runner
+        fleets on EC2 spot; a 20+ domain Cloudflare migration with zero-downtime
+        cutovers — all Terraform-managed.
+      </p>
+    </article>
+
+    <article class="job">
+      <h3>Senior DevOps Engineer <span class="jobmeta">· MaxDuel</span></h3>
+      <p class="jobmeta">Jan 2025 – present · remote</p>
+      <p>
+        Built the GCP footprint from scratch in Terraform — 10+ environments,
+        new-environment provisioning under 15 minutes; GKE behind 200+
+        microservices with ArgoCD GitOps; observability stack that cut MTTD
+        from 25 minutes to under 3.
+      </p>
+    </article>
+
+    <article class="job">
+      <h3>Senior Site Reliability Engineer <span class="jobmeta">· Metric Gaming</span></h3>
+      <p class="jobmeta">Sep 2023 – Jan 2025 · remote</p>
+      <p>
+        Ran 50+ microservices across 8 EKS clusters at 99.9% uptime (99.95% on
+        payments); Karpenter rollout cut infrastructure cost 40–60% (~$120K/yr);
+        SOC 2 / PCI-DSS audit prep down from two weeks to two days.
+      </p>
+    </article>
+
+    <article class="job">
+      <h3>Infrastructure Engineer <span class="jobmeta">· SADA, An Insight Company</span></h3>
+      <p class="jobmeta">May 2021 – Aug 2023 · Yerevan, Armenia</p>
+      <p>
+        Built 5+ GCP landing zones from scratch (org hierarchy, VPC, IAM,
+        guardrails) and migrated 400+ VMs from on-prem into Terraform-managed
+        GCP, cutting operational overhead ~70%.
+      </p>
+    </article>
+  </section>
+
+  <section aria-label="Projects">
+    <h2>projects</h2>
+    <article class="job">
+      <h3>scenar.io <span class="jobmeta">· creator (<a href="https://scenar.site">scenar.site</a>)</span></h3>
+      <p>
+        AI-powered SRE/DevOps interview practice — designed, built, and
+        operated solo: TypeScript, Svelte 5, Claude API, Fly.io, 240+ tests.
+      </p>
+    </article>
+  </section>
+
+  <section aria-label="Skills">
+    <h2>stack</h2>
+    <dl class="skills">
+      <dt>cloud</dt>          <dd>AWS (EKS, RDS, MSK, IAM) · GCP (GKE, Cloud SQL, BigQuery, Cloud Run)</dd>
+      <dt>containers</dt>     <dd>Kubernetes · Docker · Helm · Karpenter · Istio</dd>
+      <dt>iac</dt>            <dd>Terraform (modules, workspaces, state mgmt) · Pulumi · CloudFormation</dd>
+      <dt>ci/cd</dt>          <dd>GitHub Actions · ArgoCD · Jenkins · GitLab CI · Flux</dd>
+      <dt>observability</dt>  <dd>Grafana · Prometheus · Loki · Tempo · DataDog · OpenTelemetry</dd>
+      <dt>languages</dt>      <dd>Python · Go · TypeScript · Bash</dd>
+      <dt>security/net</dt>   <dd>Vault · OPA/Gatekeeper · Trivy · Cloudflare (WAF, LB, Zero Trust) · VPC · DNS · mTLS</dd>
+      <dt>practices</dt>      <dd>SRE · FinOps · incident management · RFC-driven architecture</dd>
+    </dl>
+  </section>
+
+  <section aria-label="Certifications and education">
+    <h2>certifications &amp; education</h2>
+    <ul>
+      <li><strong>GCP Professional</strong> — Cloud Architect · Cloud DevOps Engineer · Cloud Security Engineer</li>
+      <li><strong>HashiCorp Terraform Associate</strong></li>
+      <li><strong>Claude Certified Architect</strong> (Anthropic 2026, first cohort)</li>
+      <li><strong>American University of Armenia</strong> — BSc, Engineering</li>
+    </ul>
+  </section>
+</main>
+
+<footer>
+  <p>© 2026 Ashot Arushanyan · <a href="/">ashot.scenar.site</a> · one HTML file · system fonts · zero JavaScript · no tracking</p>
+</footer>
+
+</body>
+</html>
