@@ -5,9 +5,32 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Ashot Arushanyan — DevOps / SRE Engineer</title>
 <meta name="description" content="DevOps / SRE engineer — AWS, Cloudflare, Kubernetes, Terraform. I build and run production infrastructure. Open to remote roles.">
+<link rel="canonical" href="https://ashot.scenar.site/">
 <meta property="og:title" content="Ashot Arushanyan — DevOps / SRE Engineer">
 <meta property="og:description" content="I build and run production infrastructure — AWS, Cloudflare, Kubernetes, Terraform. Open to remote roles.">
 <meta property="og:type" content="website">
+<meta property="og:url" content="https://ashot.scenar.site/">
+<meta property="og:image" content="https://ashot.scenar.site/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://ashot.scenar.site/og.png">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Ashot Arushanyan",
+  "jobTitle": "Senior DevOps Engineer",
+  "url": "https://ashot.scenar.site",
+  "email": "mailto:arushanyanash@gmail.com",
+  "sameAs": [
+    "https://github.com/fock1e",
+    "https://www.linkedin.com/in/ashotarushanyan/"
+  ],
+  "knowsAbout": ["AWS", "GCP", "Cloudflare", "Kubernetes", "Terraform", "SRE", "FinOps"],
+  "alumniOf": "American University of Armenia"
+}
+</script>
 <meta name="theme-color" media="(prefers-color-scheme: light)" content="#FCFCFC">
 <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#0E0E0E">
 <link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20100%20100'%3E%3Crect%20width='100'%20height='100'%20fill='%230E0E0E'/%3E%3Ctext%20x='50'%20y='74'%20font-family='monospace'%20font-size='58'%20font-weight='bold'%20fill='%233FB950'%20text-anchor='middle'%3E%26gt;_%3C/text%3E%3C/svg%3E">
@@ -87,6 +110,7 @@ h1 {
 @media (prefers-reduced-motion: reduce) { .caret { animation: none; } }
 
 .tagline { max-width: 60ch; margin-bottom: var(--lh); }
+.hl { color: var(--accent); font-style: normal; }
 
 .cta-row {
   display: flex;
@@ -139,6 +163,12 @@ h2::after { content: ""; flex: 1; border-top: 1px solid var(--rule); }
 section p { max-width: 64ch; }
 section p + p { margin-top: var(--lh); }
 
+/* ---------- highlights ---------- */
+.hits { list-style: none; padding: 0; max-width: 64ch; }
+.hits li { position: relative; padding-left: 2ch; }
+.hits li + li { margin-top: calc(var(--lh) / 2); }
+.hits li::before { content: "▸"; position: absolute; left: 0; color: var(--accent); }
+
 /* ---------- project card ---------- */
 .card {
   position: relative;
@@ -182,11 +212,12 @@ footer {
   <h1>Ashot Arushanyan</h1>
   <p class="role">DevOps / SRE Engineer<span class="caret" aria-hidden="true"></span></p>
   <p class="tagline">
-    I build and run production infrastructure — and the pipelines,
-    guardrails, and observability around it.
+    I build and run <em class="hl">production infrastructure</em> — and the
+    pipelines, guardrails, and observability around it.
   </p>
   <p class="cta-row">
     <a class="btn btn-primary" href="mailto:arushanyanash@gmail.com">get in touch</a>
+    <a class="btn" href="/cv/">cv</a>
     <a class="btn" href="https://github.com/fock1e">github</a>
     <a class="btn" href="https://www.linkedin.com/in/ashotarushanyan/">linkedin</a>
   </p>
@@ -196,7 +227,8 @@ footer {
   <dl class="meta">
     <dt>role</dt>       <dd>DevOps / SRE engineer</dd>
     <dt>location</dt>   <dd>remote · Yerevan, Armenia (UTC+4)</dd>
-    <dt>stack</dt>      <dd>AWS · Cloudflare · Kubernetes · Terraform</dd>
+    <dt>stack</dt>      <dd>AWS · GCP · Cloudflare · Kubernetes · Terraform</dd>
+    <dt>certs</dt>      <dd>3× GCP Professional · Terraform Associate · Claude Certified Architect</dd>
     <dt>status</dt>     <dd><span class="ok" aria-hidden="true">●</span> open to remote roles</dd>
     <dt>javascript</dt> <dd>0 bytes — this page is one HTML file</dd>
   </dl>
@@ -214,8 +246,23 @@ footer {
     </p>
   </section>
 
+  <section aria-labelledby="s-highlights">
+    <h2 id="s-highlights"><span class="idx">02</span> · highlights</h2>
+    <ul class="hits">
+      <li>Cut <strong>$120K+/year</strong> off cloud spend with Karpenter and spot
+          instances on EKS, then led a FinOps program worth another $45K.</li>
+      <li>Run Kubernetes platforms — currently <strong>18 clusters, 130
+          microservices</strong> — at 99.9% uptime, with 50+ deploys a day and
+          canary rollbacks in under 5 minutes.</li>
+      <li>Built a Terraform platform that provisions <strong>10 environments in
+          under 15 minutes</strong>, workspace-based, no copy-paste.</li>
+      <li>Dropped MTTD from 25 minutes to <strong>under 3</strong> with an
+          SLO-driven Grafana / Prometheus / Loki / Tempo stack.</li>
+    </ul>
+  </section>
+
   <section aria-labelledby="s-shipped">
-    <h2 id="s-shipped"><span class="idx">02</span> · shipped</h2>
+    <h2 id="s-shipped"><span class="idx">03</span> · shipped</h2>
     <article class="card">
       <h3>scenar.io</h3>
       <p class="card-meta">
@@ -233,7 +280,7 @@ footer {
   </section>
 
   <section aria-labelledby="s-contact">
-    <h2 id="s-contact"><span class="idx">03</span> · contact</h2>
+    <h2 id="s-contact"><span class="idx">04</span> · contact</h2>
     <dl class="contact">
       <dt>email</dt>    <dd><a href="mailto:arushanyanash@gmail.com">arushanyanash@gmail.com</a></dd>
       <dt>github</dt>   <dd><a href="https://github.com/fock1e">github.com/fock1e</a></dd>
