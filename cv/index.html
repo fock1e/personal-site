@@ -100,6 +100,8 @@ h2::after { content: ""; flex: 1; border-top: 1px solid var(--rule); }
 .job h3 { font-size: 1rem; font-weight: 700; }
 .job .jobmeta { color: var(--muted); }
 .job p { max-width: 70ch; }
+.job ul { max-width: 70ch; margin-top: calc(var(--lh) / 4); }
+.nowrap { white-space: nowrap; }
 
 .skills { display: grid; grid-template-columns: 16ch 1fr; row-gap: calc(var(--lh) / 4); }
 .skills dt { color: var(--muted); }
@@ -160,49 +162,45 @@ footer {
     <article class="job">
       <h3>Senior DevOps Engineer <span class="jobmeta">· independent contractor</span></h3>
       <p class="jobmeta">May 2026 – present · remote</p>
-      <p>
-        Automated credential rotation with no downtime for a FIPS 140-3 AWS
-        GovCloud platform (HashiCorp Vault, Gardener-managed Kubernetes); a
-        self-hosted GitHub Actions runner fleet on EC2 spot that lowered CI cost
-        30% and workflow time from 32 to 12 minutes; Cloudflare moved from
-        ClickOps to Terraform, with 18 domains migrated across accounts without
-        downtime.
-      </p>
+      <ul>
+        <li>Built automated credential rotation with no downtime for a <span class="nowrap">FIPS 140-3</span> AWS GovCloud platform, using HashiCorp Vault on Gardener-managed Kubernetes.</li>
+        <li>Implemented a self-hosted GitHub Actions runner fleet on EC2 spot with Terraform lowering CI cost by 30% and cutting workflow time from 32 to 12 minutes.</li>
+        <li>Moved Cloudflare from ClickOps to Terraform and migrated 18 domains across accounts through DNS cutovers without downtime.</li>
+      </ul>
     </article>
 
     <article class="job">
       <h3>Senior DevOps Engineer <span class="jobmeta">· MaxDuel</span></h3>
       <p class="jobmeta">Jan 2025 – present · remote</p>
-      <p>
-        Designed the Terraform for a product rebrand's whole GCP setup, with new
-        environments in under 30 minutes; GKE clusters with 80+ microservices,
-        moved from push-based CI to GitOps with ArgoCD, halving deploy time;
-        Grafana, Prometheus, Loki and Tempo, cutting MTTD from 20 to 5 minutes;
-        Python tools for alert routing, IAM audits and SQL across environments.
-      </p>
+      <ul>
+        <li>Designed the Terraform for the whole GCP setup of a product rebrand from scratch with reusable modules, no copied code allowing provisioning of new environments in under 30 minutes.</li>
+        <li>Provisioned and operated GKE clusters with 80+ microservices, moved deployments from push-based CI to GitOps with ArgoCD making rollbacks easier and cutting deploy time by 50%.</li>
+        <li>Set up Grafana, Prometheus, Loki and Tempo for metrics, logs and traces across every service lowering MTTD from 20 to 5 minutes.</li>
+        <li>Wrote Python tools for alert routing, IAM audits and running SQL across environments.</li>
+      </ul>
     </article>
 
     <article class="job">
       <h3>Senior Site Reliability Engineer <span class="jobmeta">· Metric Gaming</span></h3>
       <p class="jobmeta">Sep 2023 – Jan 2025 · remote</p>
-      <p>
-        Ran 200+ microservices on 10 EKS clusters at 99.9% uptime; Karpenter cut
-        infrastructure cost 60% (about $120K a year); CI rebuilt on Bitbucket
-        Pipelines at 80% lower cost with 3x faster builds; vulnerability reports
-        for PCI-DSS, GLI-33 and ISO 27001 audits, cutting prep from two weeks to
-        two days; Conduktor Kafka alerts, cutting detection from 10 to 2 minutes;
-        RFC and P1-P4 incident processes adopted by six other teams.
-      </p>
+      <ul>
+        <li>Maintained 200+ microservices on 10 EKS clusters at 99.9% uptime.</li>
+        <li>Switched EKS node autoscaling to Karpenter saving 60% on infrastructure (about $120K a year).</li>
+        <li>Rebuilt CI on Bitbucket Pipelines reducing costs 80% and making builds 3x faster.</li>
+        <li>Automated vulnerability reports for PCI-DSS, GLI-33 and ISO 27001 audits, shrinking audit prep from two weeks to two days.</li>
+        <li>Added Conduktor for centralized Kafka monitoring with Slack alerts on consumer lag and broker health bringing Kafka incident detection down from 10 to 2 minutes.</li>
+        <li>Introduced an RFC process for infrastructure changes (40+ written, adopted by six other teams) and incident management with P1-P4 severities, clear roles during an incident and postmortems with ownership for each action item.</li>
+      </ul>
     </article>
 
     <article class="job">
       <h3>Infrastructure Engineer <span class="jobmeta">· SADA, An Insight Company</span></h3>
       <p class="jobmeta">Mar 2021 – Aug 2023 · Yerevan, Armenia</p>
-      <p>
-        Led technical discovery and wrote the SOWs for 8 customer projects;
-        built 6 GCP landing zones for new customers; migrated 400+ VMs from
-        on-prem into Terraform-managed GCP.
-      </p>
+      <ul>
+        <li>Led technical discovery with customers for 8 projects, scoped and wrote each SOW and delivered the agreed scope.</li>
+        <li>Built 6 GCP landing zones for new customers in Fintech, Healthcare, E-commerce and more.</li>
+        <li>Migrated 400+ VMs from on-prem into Terraform-managed GCP.</li>
+      </ul>
     </article>
   </section>
 
